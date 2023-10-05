@@ -9,18 +9,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background-color:#fff;
         }
 
         header {
-            background-color: #333;
+            background-color:rgb(254, 203, 211);
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
         }
 
         h1 {
             font-size: 36px;
+            animation: fadeInUp 1s;
         }
 
         .container {
@@ -30,11 +31,12 @@
         }
 
         .project {
-            background-color: #fff;
+            background-color:pink;
             padding: 20px;
             margin: 20px 0;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInLeft 1s;
         }
 
         .project h2 {
@@ -54,32 +56,63 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            animation: fadeInUp 1s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Portofolio Saya</h1>
+        <img src="pantai.jpg" width="260">
+        <h1>Vira Nadhira Zahrah</h1>
         <p>Selamat datang di portofolio saya.</p>
     </header>
 
     <div class="container">
         <div class="project">
-            <h2>Proyek 1</h2>
-            <p>Ini adalah deskripsi proyek pertama saya.</p>
+            <h2>Profil pribadi</h2>
+            <p>Halo, perkenalkan nama saya Vira Nadhira Zahrah siswi SMKN 13 BANDUNG kelas 11 RPL 1. Saya 
+                lahir di Bandung tanggal 25 july 2007
+            </p>
         </div>
 
-        <div class="project">
-            <h2>Proyek 2</h2>
-            <p>Ini adalah deskripsi proyek kedua saya.</p>
+        <div class="project"> 
+            <h2>Hobby saya</h2>
+            <p>Saya suka membaca novel atau AU, Dance, Dan Mendengarkan musik. </p>
+        </div>
+
+        <div class="project"> 
+            <h2>Riwayat Pendidikan</h2>
+            <p>SDN 021 Ciporeat</p>
+            <p>SMP Karya Pembangunan 10</p>
+            <p>SMKN 13 Bandung</p>
         </div>
 
         <!-- Tambahkan lebih banyak proyek di sini -->
 
     </div>
 
-    <footer>
-        &copy; 2023 Nama Anda
-    </footer>
+   
 </body>
 </html>
