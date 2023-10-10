@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predikat Nilai</title>
+    <style>
+        body {
+        background: linear-gradient(#c8efaa, #f3a8a8);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center; /* Tambahkan ini agar elemen berada di tengah vertikal */
+        }
+        .tampil{
+        padding: 20px;
+        border: 2px solid #9ff4ad;
+        border-radius: 5px;
+        background-color: #ffffff;
+        color: #3e2263;
+        margin-top: 20px;
+        font-size: 18px;
+        text-align:center;
+        box-shadow: 0 0 50px rgba(238, 226, 226, 0.2);
+        }
+        footer{
+            color: rgb(253, 201, 201);
+            font-size: 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 30px;
+        }
+        </style>
+</head>
+<body>
+    <div class="tampil">
+    <h1>Predikat Nilai</h1>
+    <p>Masukkan nilai Anda (0-100): <input type="number" id="inputNilai" min="0" max="100"></p>
+    <button onclick="tentukanPredikat()">Tentukan Predikat</button>
+    <p id="hasil"></p>
+    </div>
+
+    
+    <script>
+        function tentukanPredikat() {
+            var nilai = parseInt(document.getElementById("inputNilai").value);
+            var hasilElemen = document.getElementById("hasil");
+            var predikat;
+
+            if (nilai >= 0 && nilai <= 100) {
+                if (nilai >= 90) {
+                    predikat = "A";
+                } else if (nilai >= 80) {
+                    predikat = "B";
+                } else if (nilai >= 70) {
+                    predikat = "C";
+                } else if (nilai >= 60) {
+                    predikat = "D";
+                } else {
+                    predikat = "E";
+                }
+
+                hasilElemen.textContent = "Predikat nilai Anda adalah: " + predikat;
+            } else {
+                hasilElemen.textContent = "Masukkan nilai antara 0 hingga 100.";
+            }
+        }
+    </script>
+</body>
+</html>
